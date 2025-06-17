@@ -2,36 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio Web</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js"  crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header class="header">
-    <div class="header-left">
-      <img src="https://via.placeholder.com/60"  alt="Logo" class="logo" />
-      <h2>Meu Portfólio</h2>
+  <header class="header" id="inicio">
+    <div class="header-content">
+      <img src="fotoperfil.png"  alt="Foto de Perfil" class="foto-perfil" />
+      <div class="introducao">
+        <h1>Adriani Santos Monteiro</h1>
+        <p>Este é meu portfólio web, onde se encontram meus projetos, além de informações de contato e currículo.</p>
+      </div>
     </div>
     <nav class="nav">
-      <a href="#">Início</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#cards">Projetos</a>
+      <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <main>
     <div class="container">
+      <section id="cards" class="cards-container">
 
-      <section class="cards-container">
         <div class="card-box">
           <div class="card pequeno">
             <div class="card-image">
-              <img src="https://via.placeholder.com/250x180.png?text=Projeto+1" alt="Projeto 1">
+              <img src="htmlcsslogopeq.png" alt="Projeto 1">
               <div class="overlay">
-                <p>Projeto 1</p>
-                <a href="https://github.com/seu-usuario/projeto1" target="_blank">Ver no GitHub</a>
+                <p>Primeira aula de introdução HTML, CSS</p>
+                <a href="https://github.com/Adrianiani/IntroducaoWebAula1.git">Ver no GitHub</a>
               </div>
             </div>
           </div>
@@ -40,10 +44,10 @@
         <div class="card-box">
           <div class="card pequeno">
             <div class="card-image">
-              <img src="https://via.placeholder.com/250x180.png?text=Projeto+2" alt="Projeto 2">
+              <img src="htmlcsslogopeq.png" alt="Projeto 2">
               <div class="overlay">
-                <p>Projeto 2</p>
-                <a href="https://github.com/seu-usuario/projeto2" target="_blank">Ver no GitHub</a>
+                <p>Criação de um portfólio web</p>
+                <a href="https://github.com/Adrianiani/portfolio-web.git">Ver no GitHub</a>
               </div>
             </div>
           </div>
@@ -52,10 +56,10 @@
         <div class="card-box">
           <div class="card medio">
             <div class="card-image">
-              <img src="https://via.placeholder.com/320x220.png?text=Projeto+3" alt="Projeto 3">
+              <img src="htmlcsslogomed.png" alt="Projeto 3">
               <div class="overlay">
-                <p>Projeto 3</p>
-                <a href="https://github.com/seu-usuario/projeto3" target="_blank">Ver no GitHub</a>
+                <p>Criação de um currículo em HTML, CSS</p>
+                <a href="https://github.com/Adrianiani/aulacss.git">Ver no GitHub</a>
               </div>
             </div>
           </div>
@@ -64,10 +68,10 @@
         <div class="card-box">
           <div class="card medio">
             <div class="card-image">
-              <img src="https://via.placeholder.com/320x220.png?text=Projeto+4" alt="Projeto 4">
+              <img src="htmlcsslogomed.png" alt="Projeto 4">
               <div class="overlay">
-                <p>Projeto 4</p>
-                <a href="https://github.com/seu-usuario/projeto4" target="_blank">Ver no GitHub</a>
+                <p>Exercícios sobre Formulários em HTML, CSS</p>
+                <a href="#">Ver no GitHub</a>
               </div>
             </div>
           </div>
@@ -76,10 +80,10 @@
         <div class="card-box">
           <div class="card grande">
             <div class="card-image">
-              <img src="https://via.placeholder.com/400x260.png?text=Projeto+5" alt="Projeto 5">
+              <img src="htmlcsslogobig.png" alt="Projeto 5">
               <div class="overlay">
-                <p>Projeto 5</p>
-                <a href="https://github.com/seu-usuario/projeto5" target="_blank">Ver no GitHub</a>
+                <p>Exercícios sobre Box Model em HTML, CSS</p>
+                <a href="#">Ver no GitHub</a>
               </div>
             </div>
           </div>
@@ -88,47 +92,43 @@
         <div class="card-box">
           <div class="card grande">
             <div class="card-image">
-              <img src="https://via.placeholder.com/400x260.png?text=Projeto+6" alt="Projeto 6">
+              <img src="javalogobig.png" alt="Projeto 6">
               <div class="overlay">
-                <p>Projeto 6</p>
-                <a href="https://github.com/seu-usuario/projeto6" target="_blank">Ver no GitHub</a>
+                <p>Exercícios sobre métodos em Java</p>
+                <a href="#">Ver no GitHub</a>
               </div>
             </div>
           </div>
         </div>
+
       </section>
 
-      <section class="aside-container">
+      <section id="sobre" class="aside-container">
         <aside class="aside">
           <h3>Currículo</h3>
           <p>Neste currículo, você vai encontrar mais informações sobre formação, contato, etc.</p>
         </aside>
-
         <aside class="aside">
           <h3>Clique aqui para saber mais:</h3>
-          <a href="curriculo.pdf" download>Baixar Currículo</a>
+          <a href="curriculo.pdf" download class="botao-link">Baixar Currículo</a>
         </aside>
       </section>
     </div>
   </main>
 
-  <footer class="footer">
+  <footer id="contato" class="footer">
     <div class="contato">
       <i class="fas fa-envelope"></i>
-      <p>monteiroadriani@email.com</p>
+      <p>monteiroadriani@gmail.com</p>
     </div>
-
     <div class="redes-sociais">
-      <a href="https://github.com/Adrianiani" target="_blank">
-        <i class="fab fa-github"></i>
-        <span>Github</span>
+      <a href="https://github.com/Adrianiani"  target="_blank" class="botao-link">
+        <i class="fab fa-github"></i><span>Github</span>
       </a>
-      <div class="linkedin">
-        <i class="fab fa-linkedin"></i>
-        <span>Instagram: awawaw</span>
+      <div class="instagram">
+        <i class="fab fa-instagram"></i><span>@ani.smksks</span>
       </div>
     </div>
-
     <p>&copy; 2025 Adriani Santos Monteiro. Todos os direitos reservados.</p>
   </footer>
 
