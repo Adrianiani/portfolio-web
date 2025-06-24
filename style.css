@@ -34,7 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -83,6 +83,49 @@ body {
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+
+  .introducao h1 {
+    font-size: 1.5rem;
+  }
+
+  .introducao p {
+    font-size: 1rem;
+  }
+
+  .nav {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+
+  .card.pequeno { height: 160px; }
+  .card.medio   { height: 200px; }
+  .card.grande  { height: 240px; }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+
+  .aside-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .card-box {
   background-color: #1e252d;
   padding: 15px;
@@ -94,20 +137,26 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(49, 0, 128, 0.4);
 }
 
 .card.pequeno { height: 180px; }
 .card.medio   { height: 220px; }
 .card.grande  { height: 260px; }
 
-.card img {
+.card-image {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(52, 0, 136, 0.5);
+}
+
+.card img.projeto-img {
+  width: 90%;
+  height: 90%;
   object-fit: contain;
-  object-position: center;
-  display: block;
-  border-radius: 10px;
 }
 
 .overlay {
@@ -124,7 +173,6 @@ body {
   align-items: center;
   opacity: 0;
   padding: 20px;
-  text-align: center;
 }
 
 .card:hover .overlay {
@@ -180,7 +228,7 @@ body {
   align-items: center;
   gap: 8px;
   color: #b18aff;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -212,13 +260,18 @@ body {
   color: #b18aff;
 }
 
+.contato a {
+  color: #b18aff;
+  text-decoration: none;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+}
+
 .redes-sociais {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-}
-
-.instagram {
-  cursor: default;
 }
